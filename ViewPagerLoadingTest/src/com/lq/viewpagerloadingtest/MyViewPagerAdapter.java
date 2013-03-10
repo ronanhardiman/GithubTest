@@ -17,7 +17,7 @@ public class MyViewPagerAdapter extends PagerAdapter {
 	private Context mContext;
 	private MainActivity mActivity;
 	private int viewPagerSize;
-	private int loadingSize = 5;	//动态加载 的数据 size
+	private int loadingSize = 5;	
 	private int leftViewId;
 	private int rightViewId;
 	

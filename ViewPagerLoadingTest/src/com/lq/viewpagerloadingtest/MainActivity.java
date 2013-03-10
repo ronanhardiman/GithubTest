@@ -9,22 +9,16 @@ import android.content.Intent;
 import android.support.v4.view.ViewPager;
 import android.view.Menu;
 import android.view.View;
-/**
- * viewpager 动态加载 
- * 首次进入加载左右5条数据 , 左右滑动的时候 根据有无数据 继续加载 前后的数据.
- * @author liq
- *
- */
 public class MainActivity extends Activity {
 
 	private ViewPager viewpager;
 	private MyViewPagerAdapter mAdapter;
-//	private ArrayList<String> StringArrayList = new ArrayList<String>();	//viewpager 实际加载的大小
-	private ArrayList<String> StringList;	//viewpager 总大小
-	private int initSize = 5; //初始化 viewpager 的大小, < 5;
-	private int listSize;	//viewpage 总的大小
-	private int currentId ;	//点击的view id
-	private int currentViewpagerID ;	//当前显示的 viewpager ID
+//	private ArrayList<String> StringArrayList = new ArrayList<String>();	
+	private ArrayList<String> StringList;	
+	private int initSize = 5; 
+	private int listSize;	
+	private int currentId ;	
+	private int currentViewpagerID ;	
 	
 	
 	public int getCurrentViewpagerID() {
@@ -51,7 +45,7 @@ public class MainActivity extends Activity {
 	}
 
 	private void initView() {
-		//初始化 viewpager 大小
+		
 		viewpager = (ViewPager) findViewById(R.id.viewpager);
 		int leftViewId =currentId - 2;
 		if(leftViewId < 0 ) leftViewId = 0 ;
@@ -63,7 +57,7 @@ public class MainActivity extends Activity {
 		mAdapter.setList(StringList);
 		viewpager.setAdapter(mAdapter);
 		viewpager.setCurrentItem(currentId);
-		currentViewpagerID = viewpager.getCurrentItem();//当前显示的viewpager  的id
+		currentViewpagerID = viewpager.getCurrentItem();//锟斤拷前锟斤拷示锟斤拷viewpager  锟斤拷id
 	}
 
 	@Override
@@ -72,10 +66,7 @@ public class MainActivity extends Activity {
 		getMenuInflater().inflate(R.menu.main, menu);
 		return true;
 	}
-	/**
-	 * 动态加载一个数据
-	 * @param position
-	 */
+	
 	public void initData(int position){
 		int len = position + 1;
 		StringList.set(len, "loading : "+len);
@@ -83,12 +74,7 @@ public class MainActivity extends Activity {
 		mAdapter.notifyDataSetChanged();
 	}
 	
-	/**
-	 * 动态加载 viewpager 数据
-	 * @param size 加载数据的个数
-	 * @param position 当前页面id
-	 * @return
-	 */
+	
 	public ArrayList<String> initData(int size,int position){
 //		listSize = listSize + size;
 		int leftId = currentViewpagerID + 1;
