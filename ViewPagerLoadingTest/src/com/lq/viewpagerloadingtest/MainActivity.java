@@ -57,7 +57,7 @@ public class MainActivity extends Activity {
 		mAdapter.setList(StringList);
 		viewpager.setAdapter(mAdapter);
 		viewpager.setCurrentItem(currentId);
-		currentViewpagerID = viewpager.getCurrentItem();//��ǰ��ʾ��viewpager  ��id
+		currentViewpagerID = viewpager.getCurrentItem();
 	}
 
 	@Override

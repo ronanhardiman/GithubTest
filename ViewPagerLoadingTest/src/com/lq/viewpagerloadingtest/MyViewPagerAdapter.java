@@ -20,7 +20,13 @@ public class MyViewPagerAdapter extends PagerAdapter {
 	private int loadingSize = 5;	
 	private int leftViewId;
 	private int rightViewId;
-	
+	private DataLoadingListener dataLoadingListener;
+	interface DataLoadingListener{
+		void Loading();
+	}
+	public void setDataLoadingListener(DataLoadingListener dataLoadingListener){
+		this.dataLoadingListener = dataLoadingListener;
+	}
 	public MyViewPagerAdapter(MainActivity mActivity) {
 		this.mActivity = mActivity;
 		mContext = mActivity;
