@@ -27,15 +27,13 @@ import android.widget.ProgressBar;
 public class PicViewActivity extends Activity {
 	private static final String TAG = "PicViewActivity";
 
-//	private MyPagerAdapter myAdapter;
-	private MyPagerAdapter2 myAdapter;
+	private MyPagerAdapter myAdapter;
 	private ViewPager myViewPager;
 	private List<View> listViews;
-	private int firstId = 1;
+
 	Context mContext;
 
 	private String[] urls = {
-			"http://share.baidu.com/static/web/img/imgshare/preview_img_small.jpg?v=e0f4900b.jpg",
 			"http://www.wowstar.info/TuPian/imagesALL/200803/200832102841839.jpg",
 			"http://news.hainan.net/Editor/UploadFile08/2009w10r23f/20091023173826767.jpg",
 			"http://pic10.nipic.com/20101031/3320946_122138507000_2.jpg",
@@ -55,29 +53,10 @@ public class PicViewActivity extends Activity {
 		setContentView(R.layout.activity_pic);
 
 		listViews = new ArrayList<View>();
+
 		if (null == urls) {
 			finish();
 		}
-		initData();
-	}
-	//chushihua  data
-	private void initData() {
-		HttpClient.getOriginalPic(urls[firstId], firstId, mHandler);
-		changeProgressBar(true);
-		myAdapter = new MyPagerAdapter2(listViews);
-		myViewPager = (ViewPager) findViewById(R.id.myMesPager);
-		myViewPager.setAdapter(myAdapter);
-		myViewPager.setCurrentItem(firstId);
-		
-	}
-
-	private void changeProgressBar(boolean b) {
-		if(b){
-			((ProgressBar)findViewById(R.id.progress)).setVisibility(View.VISIBLE);
-		}else{
-			((ProgressBar)findViewById(R.id.progress)).setVisibility(View.GONE);
-		}
-		
 	}
 
 	private Handler mHandler = new Handler() {
@@ -112,7 +91,7 @@ public class PicViewActivity extends Activity {
 	protected void onResume() {
 		super.onResume();
 
-//		pageswitch();
+		pageswitch();
 	}
 
 	private void pageswitch() {
@@ -123,7 +102,7 @@ public class PicViewActivity extends Activity {
 			listViews.add(addView());
 		}
 
-//		myAdapter = new MyPagerAdapter(listViews);
+		myAdapter = new MyPagerAdapter(listViews);
 		myViewPager = (ViewPager) findViewById(R.id.myMesPager);
 		myViewPager.setAdapter(myAdapter);
 		myViewPager.setCurrentItem(0);
