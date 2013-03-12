@@ -22,7 +22,7 @@ public class MyViewPagerAdapter extends PagerAdapter {
 	private int rightViewId;
 	private DataLoadingListener dataLoadingListener;
 	interface DataLoadingListener{
-		void Loading();
+		void Loading(int position);
 	}
 	public void setDataLoadingListener(DataLoadingListener dataLoadingListener){
 		this.dataLoadingListener = dataLoadingListener;
@@ -34,13 +34,14 @@ public class MyViewPagerAdapter extends PagerAdapter {
 	
 	@Override
 	public void setPrimaryItem(ViewGroup container, int position, Object object) {
-		mActivity.setCurrentViewpagerID(position);
+		dataLoadingListener.Loading(position);
+		/*mActivity.setCurrentViewpagerID(position);
 		if(position  == rightViewId){
 			//add more view 
 //			mActivity.initData(loadingSize,position);
 			mActivity.initData(position);
 //			loadMore(position);
-		}
+		}*/
 	}
 	
 	private void loadMore(int position) {

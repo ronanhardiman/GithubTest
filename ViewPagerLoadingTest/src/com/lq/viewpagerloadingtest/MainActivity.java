@@ -3,13 +3,15 @@ package com.lq.viewpagerloadingtest;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.lq.viewpagerloadingtest.MyViewPagerAdapter.DataLoadingListener;
+
 import android.os.Bundle;
 import android.app.Activity;
 import android.content.Intent;
 import android.support.v4.view.ViewPager;
 import android.view.Menu;
 import android.view.View;
-public class MainActivity extends Activity {
+public class MainActivity extends Activity implements DataLoadingListener{
 
 	private ViewPager viewpager;
 	private MyViewPagerAdapter mAdapter;
@@ -56,6 +58,7 @@ public class MainActivity extends Activity {
 		mAdapter.setDate(leftViewId,rightViewId);
 		mAdapter.setList(StringList);
 		viewpager.setAdapter(mAdapter);
+		mAdapter.setDataLoadingListener(this);
 		viewpager.setCurrentItem(currentId);
 		currentViewpagerID = viewpager.getCurrentItem();
 	}
@@ -89,6 +92,17 @@ public class MainActivity extends Activity {
 		}
 //		initSize = initSize + size;
 		return StringList;
+	}
+
+	@Override
+	public void Loading(int position) {
+		LoadingData(position);
+		
+	}
+
+	private void LoadingData(int position) {
+		StringList.set(position, "Loading + "+position);
+		mAdapter.notifyDataSetChanged();
 	}
 	
 }
