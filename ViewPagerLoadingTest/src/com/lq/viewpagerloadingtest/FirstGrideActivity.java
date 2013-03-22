@@ -1,6 +1,8 @@
 package com.lq.viewpagerloadingtest;
 
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
 
 import android.app.Activity;
 import android.app.ListActivity;
@@ -19,7 +21,13 @@ import android.widget.TextView;
 
 public class FirstGrideActivity extends Activity {
 	private ArrayList<String> StringList = new ArrayList<String>();
-	private int listSize = 15;
+//	private int listSize = 15;
+	private String[] images_urls = {
+			"http://share.baidu.com/static/web/img/imgshare/preview_img_small.jpg?v=e0f4900b.jpg",
+			"http://www.wowstar.info/TuPian/imagesALL/200803/200832102841839.jpg",
+			"http://news.hainan.net/Editor/UploadFile08/2009w10r23f/20091023173826767.jpg",
+			"http://pic10.nipic.com/20101031/3320946_122138507000_2.jpg",
+			"http://news.replays.net/Uploads/photo/20100611/201006111057344381.jpg" };
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -29,9 +37,12 @@ public class FirstGrideActivity extends Activity {
 	}
 
 	private void initView() {
-		for (int i = 0; i < listSize; i++) {
-			StringList.add(i, "this is : "+i);
-		}
+		StringList = (ArrayList<String>) Arrays.asList(images_urls);
+		StringList.addAll(StringList);
+		StringList.addAll(StringList);
+//		for (int i = 0; i < listSize; i++) {
+//			StringList.add(i, "this is : "+i);
+//		}
 		final GridView gridView = (GridView) findViewById(R.id.gridview);
 		MyGrideAdapter myGrideAdapter = new MyGrideAdapter();
 		gridView.setAdapter(myGrideAdapter);
@@ -41,7 +52,7 @@ public class FirstGrideActivity extends Activity {
 					long arg3) {
 				Intent intent = new Intent();
 				Bundle bundle = new Bundle();
-				bundle.putInt("grideSize", gridView.getCount());
+//				bundle.putInt("grideSize", gridView.getCount());
 				bundle.putInt("currentId", arg2);
 				bundle.putStringArrayList("StringList", StringList);
 				intent.putExtras(bundle);

@@ -21,7 +21,7 @@ public class MainActivity extends Activity implements DataLoadingListener{
 	private int listSize;	
 	private int currentId ;	
 	private int currentViewpagerID ;	
-	
+	private MyViewPagerAdapter2 myViewPagerAdapter;
 	
 	public int getCurrentViewpagerID() {
 		return currentViewpagerID;
@@ -41,9 +41,15 @@ public class MainActivity extends Activity implements DataLoadingListener{
 		setContentView(R.layout.activity_main);
 		Intent intent = getIntent();
 		currentId = intent.getIntExtra("currentId", 0);
-		listSize = intent.getIntExtra("grideSize", 20);
+//		listSize = intent.getIntExtra("grideSize", 0);
 		StringList = intent.getStringArrayListExtra("StringList");
-		initView();
+//		initView();
+		initView2();
+	}
+
+	private void initView2() {
+		viewpager = (ViewPager) findViewById(R.id.viewpager);
+		myViewPagerAdapter = new MyViewPagerAdapter2(this);
 	}
 
 	private void initView() {
