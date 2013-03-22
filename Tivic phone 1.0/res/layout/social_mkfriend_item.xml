@@ -1,0 +1,77 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="horizontal" xmlns:app="http://schemas.android.com/apk/res/com.igrs.tivic.phone">
+	<com.igrs.tivic.phone.widget.AsyncImageView
+	    android:id="@+id/social_mkfriend_icon"
+        android:layout_width="65dp"
+        android:layout_height="65dp"
+        android:background="@color/avater_bg"
+        android:padding="1dp"
+        android:scaleType="fitXY"
+        android:layout_margin="5dp"
+        android:src="@drawable/base_usrinfo"
+	    />
+	<LinearLayout 
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:layout_weight="1"
+	    android:orientation="vertical"
+	    >
+	    <LinearLayout 
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:orientation="vertical"
+	        >
+	        <TextView 
+	            android:id="@+id/social_mkfriend_name"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:text="用户名"
+	            android:textSize="14dp"
+	            android:textColor="#4aadeb"
+	            />
+	        <LinearLayout 
+	            android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+		        android:orientation="horizontal"
+	            >
+	            <ImageView 
+		            android:id="@+id/social_mkfriend_gender"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:src="@drawable/ugc_gender_femaile"
+		            android:layout_gravity="center_vertical"
+		            />
+	            <TextView
+		            android:id="@+id/social_mkfriend_distance"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:textStyle="italic"
+	                android:text="@string/loc_unknown"
+	                android:textColor="#4aadeb"
+	                android:textSize="14dp"
+	                android:paddingLeft="5dp" />
+	        </LinearLayout>
+	        
+	        
+	    </LinearLayout>
+	    <TextView 
+	        android:id="@+id/social_mkfriend_program"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text="正在收看：快乐大本营"
+	        android:textColor="@color/base_content"
+            android:textSize="14dp"
+	        />
+	    <TextView 
+	        android:id="@+id/social_mkfriend_trends"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:textColor="@color/base_content"
+            android:textSize="14dp"
+	        android:text="最新动态：修改了头像，增加了爱情故事。。。"
+	        />
+	</LinearLayout>
+
+</LinearLayout>

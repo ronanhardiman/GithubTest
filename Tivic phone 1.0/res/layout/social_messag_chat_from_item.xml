@@ -1,0 +1,57 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:greendroid="http://schemas.android.com/apk/res/com.igrs.tivic.phone"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/text_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:background="#bfbfbf"
+        android:paddingBottom="2dp"
+        android:paddingLeft="4dp"
+        android:paddingRight="4dp"
+        android:paddingTop="2dp"
+        android:textColor="#ffffff"
+        android:textSize="12sp" />
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/social_message_bg_xiangyou"
+            android:gravity="right"
+            android:layout_gravity="right"
+            android:layout_marginTop="3dp"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/text_message"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:focusable="true"
+                android:gravity="left|center"
+                android:lineSpacingExtra="2dp"
+                android:paddingLeft="5dp"
+                android:paddingRight="10dp"
+                android:text="消息内容"
+                android:textColor="@color/base_content"
+                android:textSize="16dp" />
+
+            <com.igrs.tivic.phone.widget.AsyncImageView
+                android:id="@+id/img_subnail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:maxHeight="64dp"
+                android:maxWidth="64dp"
+                android:paddingLeft="5dp"
+                android:paddingRight="10dp"
+                android:scaleType="fitXY"
+                greendroid:defaultSrc="@drawable/base_subnail" />
+        </LinearLayout>
+
+</LinearLayout>

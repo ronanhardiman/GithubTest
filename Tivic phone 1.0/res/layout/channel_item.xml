@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="60dp"
+    android:orientation="vertical" 
+    android:layout_marginTop="5dp">
+    <ImageView 
+        android:id="@+id/channel_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_gravity="center"
+        android:scaleType="fitCenter"
+        android:padding="4dp"
+        android:src="@drawable/beijing_big"
+        />
+	<TextView  
+        android:id="@+id/channel_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"  
+        android:textColor="@color/program_light_info"
+        android:layout_gravity="center"
+        android:gravity="center_horizontal"
+       	android:singleLine="true"
+        android:ellipsize="end"
+        />
+    
+</LinearLayout>

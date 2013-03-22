@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<lint>
+    <issue id="MissingPrefix">
+        <ignore path="res\layout\epg_main.xml" />
+    </issue>
+    <issue id="NewApi" severity="ignore">
+        <ignore path="src\com\igrs\tivic\phone\Utils\HttpClientUtils.java" />
+    </issue>
+    <issue id="ProtectedPermissions">
+        <ignore path="AndroidManifest.xml" />
+    </issue>
+    <issue id="ResourceAsColor">
+        <ignore path="src\com\igrs\tivic\phone\ViewGroup\ContentsView.java" />
+    </issue>
+</lint>

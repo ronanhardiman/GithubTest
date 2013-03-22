@@ -1,0 +1,50 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/friend_siliao"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+    <!--     <fragment
+            android:id="@+id/friend_baseinfo"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:name="com.igrs.tivic.phone.Fragment.SocialFriendsInfoBaseInfoFragment" />--> 
+
+    <FrameLayout
+        android:id="@+id/friend_baseinfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+    </FrameLayout>
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="6dp"
+            android:src="@drawable/social_base_line" />
+		<TextView 
+		    android:id="@+id/tv_ta"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:textSize="17sp"
+		    android:textColor="#333333"
+		    android:layout_marginLeft="5dp"
+		    android:layout_marginTop="6dp"
+		    android:visibility="gone"
+		    android:layout_marginBottom="11dp"
+		    />
+        <FrameLayout
+            android:id="@+id/socialcontainer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+        </FrameLayout>
+    </LinearLayout>
+
+
+
+</RelativeLayout>

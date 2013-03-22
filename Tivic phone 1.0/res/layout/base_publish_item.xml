@@ -1,0 +1,94 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:greendroid="http://schemas.android.com/apk/res/com.igrs.tivic.phone"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:focusable="false"
+    android:focusableInTouchMode="false"
+    android:orientation="horizontal"
+    android:padding="5dp" >
+
+    <com.igrs.tivic.phone.widget.AsyncImageView
+        android:id="@+id/icon_usr"
+        android:layout_width="65dp"
+        android:layout_height="65dp"
+        android:background="@color/avater_bg"
+        android:padding="1dp"
+        android:scaleType="fitXY"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/text_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:paddingLeft="5dp"
+                android:text="用户名"
+                android:textColor="@color/light_blue"
+                android:textSize="14dp"
+                android:textStyle="italic" />
+
+            <ImageView
+                android:id="@+id/icon_gender"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="5dp"
+                android:src="@drawable/ugc_gender_femaile" />
+
+            <TextView
+                android:id="@+id/text_distence"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:paddingLeft="5dp"
+                android:text="1.2km"
+                android:textColor="@color/light_blue"
+                android:textSize="14dp"
+                android:textStyle="italic" />
+
+            <TextView
+                android:id="@+id/text_time"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:gravity="right"
+                android:paddingLeft="30dp"
+                android:textColor="@color/light_gray"
+                android:text="2012-11-16  13:20"
+                android:textSize="14dp"
+                android:textStyle="italic" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/text_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:gravity="left"
+            android:text=""
+            android:textSize="14dp" />
+
+        <com.igrs.tivic.phone.widget.AsyncImageView
+            android:id="@+id/icon_subnail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:scaleType="fitXY"
+            android:maxWidth="128dp"
+            android:maxHeight="128dp"
+            android:padding="5dp"
+            android:layout_margin="5dp"
+            android:background="@drawable/ugc_tupian_bg"
+            android:layout_gravity="right|bottom"
+            greendroid:defaultSrc="@drawable/base_subnail" />
+    </LinearLayout>
+
+</LinearLayout>

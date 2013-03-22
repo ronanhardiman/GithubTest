@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rl_light"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/program_light_bg"
+    >
+
+     <RelativeLayout
+         android:id="@+id/channel_add"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content" 
+         android:layout_marginLeft="@dimen/program_edge_distance"
+         >
+		<!-- program -->
+    	<TextView 
+                android:id="@+id/program_light_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/program_item_title"
+                android:textColor="@color/program_info"
+                android:text=""
+                android:layout_marginTop="5dp"
+                android:singleLine="true"
+                />
+    	<!-- android:text="time" -->
+    	<TextView 
+                android:id="@+id/program_light_time"
+                android:layout_below="@+id/program_light_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/program_light_time"
+                android:textColor="@color/program_light_info"
+                android:text=""
+                android:layout_marginTop="7dp"
+                android:singleLine="true"
+                />
+    	<ImageView
+	            android:id="@+id/cp_collection"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_marginTop="12dp"
+	            android:src="@drawable/add_collect"
+	            android:layout_alignParentRight="true"
+            />
+  </RelativeLayout>
+  <!-- android:text="热点信息热点信息热点信息热点信息热点信息热点信息热点信息" -->
+  <com.igrs.tivic.phone.ViewGroup.ScrollForeverTextView
+	        android:id="@+id/program_hot"
+	        android:layout_below="@+id/channel_add"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:textSize="@dimen/program_light_time"
+            android:textColor="@color/program_light_info"
+            android:layout_marginTop="7dp"
+            android:paddingBottom="5dp"
+	        android:paddingLeft="18dp"
+	        android:singleLine="true"
+	        android:ellipsize="marquee"
+	        android:marqueeRepeatLimit="marquee_forever"
+	        android:text=""
+	        />
+</RelativeLayout>

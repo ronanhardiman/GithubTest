@@ -1,0 +1,145 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+	<LinearLayout 
+	    android:layout_width="fill_parent"
+	    android:layout_height="fill_parent"
+	    android:orientation="vertical"
+	    
+	    >
+	    <LinearLayout 
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:orientation="vertical"
+	        
+	        >
+			<LinearLayout 
+			    android:layout_width="match_parent"
+			    android:layout_height="wrap_content"
+			    android:layout_marginTop="8dp"
+			    android:layout_marginBottom="8dp"
+			    android:orientation="horizontal"
+			    >
+			    <TextView 
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+			        android:layout_marginLeft="7dp"
+			        android:paddingRight="5dp"
+			        android:layout_gravity="center_vertical"
+			        android:textSize="17sp"
+			        android:textColor="@color/base_content"
+			        android:text="@string/the_program_friend"
+			        />
+			    <LinearLayout 
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+			        android:orientation="horizontal"
+			        >
+			        <Button 
+				        android:id="@+id/social_mkd_all"
+				        android:layout_width="wrap_content"
+				        android:layout_height="wrap_content"
+				        android:layout_weight="1"
+				        android:background="@drawable/social_page_all_normal"
+				        />
+			        <Button 
+				        android:id="@+id/social_mkd_woman"
+				        android:layout_width="wrap_content"
+				        android:layout_height="wrap_content"
+				        android:layout_weight="1"
+				        android:background="@drawable/social_page_woman_normal"
+				        />
+				    <Button 
+				        android:id="@+id/social_mkd_man"
+				        android:layout_width="wrap_content"
+				        android:layout_height="wrap_content"
+				        android:layout_weight="1"
+				        android:background="@drawable/social_page_man_normal"
+				        />
+				    
+			    </LinearLayout>
+			    
+			</LinearLayout>	 
+			<ImageView 
+			    android:layout_width="match_parent"
+			    android:layout_height="3dp"
+			    android:layout_marginBottom="5dp"
+			    android:background="#999999"
+			    />    
+			<LinearLayout 
+			    android:id="@+id/social_mkfriend_select_condition"
+			    android:layout_width="match_parent"
+			    android:layout_height="wrap_content"
+			    >
+			    <!-- android:text="80后&#160;&#160;&#160;男生&#160;&#160;&#160;双鱼座&#160;&#160;&#160;陈奕迅&#160;&#160;&#160;快乐大本营 " -->
+			    <TextView 
+			        android:id="@+id/social_mkd_seconditon"
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+			        android:textSize="18sp"
+			        android:background="#E1ECF4"
+			        android:layout_marginLeft="5dp"
+			        android:layout_marginRight="5dp"
+			        android:padding="5dp"
+			        android:text=""
+			        android:visibility="gone"
+			        />
+			</LinearLayout>   
+	    </LinearLayout>
+	    <LinearLayout 
+	        android:layout_width="match_parent"
+	        android:layout_height="match_parent"
+	        >
+	        <ListView 
+	            android:id="@+id/mkf_list"
+	            android:layout_width="match_parent"
+	            android:layout_height="match_parent"
+	            android:divider="@drawable/list_divider"
+	            android:cacheColorHint="#00000000"
+	            ></ListView>
+	        <LinearLayout 
+			    android:id="@+id/social_mkfriend_loading"
+			    android:layout_width="match_parent"
+			    android:layout_height="match_parent"
+			    android:background="@color/loading_bg"
+			    android:paddingRight="5dp"
+			    >
+			    <include layout="@layout/page_load" />
+			</LinearLayout>
+	    </LinearLayout>
+	</LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone" >
+
+        <TextView
+            android:id="@+id/id_text1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="社交之交友"
+            android:textSize="26dp" />
+
+        <Button
+            android:id="@+id/id_bt1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="查看该用户资料"
+            android:textSize="26dp" />
+
+        <Button
+            android:id="@+id/id_bt2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="返回"
+            android:textSize="26dp" />
+    </LinearLayout>
+
+</FrameLayout>

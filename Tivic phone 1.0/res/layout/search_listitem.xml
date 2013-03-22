@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:descendantFocusability="blocksDescendants"
+    android:gravity="center_vertical"
+    android:minHeight="50dip"
+    android:orientation="horizontal"
+    android:paddingBottom="7dip"
+    android:paddingLeft="6dip"
+    android:paddingRight="6dip"
+    android:paddingTop="8dip" >
+
+    <TextView
+        android:id="@+id/search_item_title"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:singleLine="true"
+        android:textColor="@color/item_color"
+        android:textSize="@dimen/item_text"
+        android:layout_marginLeft="13dp"
+        android:textStyle="bold" />
+
+    <com.igrs.tivic.phone.widget.AsyncImageView
+        android:id="@+id/search_item_image"
+        android:layout_width="60dp"
+        android:layout_height="60dp" >
+    </com.igrs.tivic.phone.widget.AsyncImageView>
+
+    <LinearLayout
+        android:id="@+id/search_listitem_ll"
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="1dip"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:gravity="center_vertical"
+            >
+			<ImageView
+			    android:id="@+id/channel_icon"
+			    android:layout_alignParentLeft="true"
+			    android:layout_margin="7dp" 
+			    android:layout_centerVertical="true"
+			    android:layout_width="wrap_content"
+            	android:layout_height="wrap_content"
+            	android:scaleType="fitXY"
+			    />
+            <TextView
+                android:id="@+id/search_item_program"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxEms="6"
+                android:singleLine="true"
+                android:ellipsize="end"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/channel_icon"
+                android:layout_marginLeft="7dip"
+                android:textColor="@color/base_content"
+                android:textSize="@dimen/loadingpage_text_margin_prograss" />
+
+            <TextView
+                android:id="@+id/search_item_date"
+                android:layout_toRightOf="@id/search_item_program"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="13dip"
+                android:textColor="@color/light_gray"
+                android:textSize="@dimen/comment_time" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/search_item_detail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dip"
+            android:text="发布于"
+            android:textColor="@color/light_gray"
+            android:textSize="@dimen/comment_describe_title" />
+    </LinearLayout>
+
+</LinearLayout>

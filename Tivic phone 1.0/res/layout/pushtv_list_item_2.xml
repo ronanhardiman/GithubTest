@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal" 
+    android:background="@drawable/hot_tv_waterfall">
+
+    <com.igrs.tivic.phone.widget.CustomTextView
+        android:id="@+id/ctv_left"
+        android:layout_width="0dip"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:layout_marginRight="8sp"/>
+    
+    <com.igrs.tivic.phone.widget.ImageTextView
+        android:id="@+id/itv_left"
+        android:layout_width="0dip"
+        android:layout_height="match_parent"
+        android:layout_weight="1"/>
+    
+	
+</LinearLayout>

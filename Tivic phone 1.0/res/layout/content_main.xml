@@ -1,0 +1,39 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+	<TextView  android:id="@+id/alert_info_id" android:layout_width="wrap_content" 
+	   android:visibility="gone" 
+       android:layout_height="wrap_content" android:layout_gravity="center"   
+       android:text="@string/pushtv_alert_info"/>
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewpager_content"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+    </android.support.v4.view.ViewPager>
+	
+    <LinearLayout
+        android:id="@+id/user_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|left"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <ImageButton
+            android:id="@+id/button_collect"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/content_collect_button"
+            android:layout_margin="10dip"
+            android:clickable="true"
+             />
+        <Button
+            android:id="@+id/button_comment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/content_discuss_button"
+            android:layout_margin="10dip" />
+
+    </LinearLayout>
+</FrameLayout>

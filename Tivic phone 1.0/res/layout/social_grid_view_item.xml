@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content" >
+
+    <com.igrs.tivic.phone.widget.AsyncImageView
+        android:id="@+id/iv_user_label"
+        android:layout_width="wrap_content"
+	    android:layout_height="80dp"
+	    android:scaleType="fitXY"
+	    android:paddingLeft="8dp"
+	    android:paddingRight="8dp"
+	    android:paddingBottom="5dp"
+	    android:paddingTop="1dp"
+        />
+
+    <ImageView
+        android:id="@+id/iv_background"
+        android:layout_width="wrap_content"
+        android:layout_height="80dp"
+   		/>
+
+
+</FrameLayout>

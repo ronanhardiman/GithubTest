@@ -1,0 +1,95 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:greendroid="http://schemas.android.com/apk/res/com.igrs.tivic.phone"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+    
+	<LinearLayout
+	    android:layout_width="match_parent"
+	    android:layout_height="65dp"
+	    android:id="@+id/ugc_usrinfo"
+	    >
+	    <include layout="@layout/base_publish_viewgroup_item"/>
+	</LinearLayout>
+	
+    <LinearLayout
+        android:id="@+id/ugc_publish_main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="7dp"
+        android:layout_marginRight="7dp"
+        android:background="@drawable/ugc_detail_bg"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:orientation="vertical"
+        android:padding="5dp" >
+
+        <TextView
+            android:id="@+id/id_text_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left|top"
+            android:layout_weight="0.17"
+            android:gravity="left|top"
+            android:text=""
+            android:textColor="#333333"
+            android:textSize="19dp" />
+
+        <TextView
+            android:id="@+id/id_text_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left|top"
+            android:layout_weight="0.13"
+            android:gravity="left|top"
+            android:text=""
+            android:textColor="#666666"
+            android:textSize="16dp" />
+
+        <com.igrs.tivic.phone.widget.AsyncImageView
+            android:id="@+id/publish_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:maxHeight="128dp"
+            android:maxWidth="128dp"
+            android:padding="5dp"
+            android:layout_margin="5dp"
+            android:scaleType="fitXY"
+            android:background="@drawable/ugc_tupian_bg"
+            greendroid:defaultSrc="@drawable/base_subnail" />
+
+        <TextView
+            android:id="@+id/text_time1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.02"
+            android:gravity="right"
+            android:paddingLeft="30dp"
+            android:text="2012-11-16  13:20"
+            android:textSize="13dp"
+            android:textStyle="italic" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/member_reviews"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/pay_image"
+        android:paddingLeft="10dip"
+        android:paddingTop="10dp"
+        android:textColor="@color/base_content"
+        android:text="@string/member_reviews"
+        android:textSize="15dp" />
+
+    <LinearLayout
+        android:id="@+id/id_empty"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="10dp" >
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/all_bg"
+    android:gravity="center_horizontal"
+     >
+
+        <ImageView
+            android:id="@+id/logo"
+            style="@style/logoStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:layout_centerHorizontal="true"/>
+   
+
+    <LinearLayout
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/logo"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:id="@+id/chk_img"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <ImageView
+                android:id="@+id/iv_mail"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginLeft="15dp"
+                android:src="@drawable/login_registered_mail_selected" />
+
+            <ImageView
+                android:id="@+id/iv_phone"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginRight="15dp"
+                android:src="@drawable/login_registered_phone_normal" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_send_email_msg"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/chk_img"
+            android:layout_marginTop="40dp"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/login_register_email_send_success"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/login_register_email_send_code_text1"
+                android:textColor="#666666"
+                android:textSize="19sp"
+                 />
+
+            <TextView
+                android:id="@+id/login_register_email"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textColor="#666666"
+                android:layout_marginTop="5dp"
+                android:textSize="19sp"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/tv_text2"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/login_register_email_send_code_text2"
+                android:layout_marginTop="5dp"
+               	android:textSize="19sp"
+                android:textColor="#666666" />
+
+            <ImageView
+                android:id="@+id/iv_complete"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_text2"
+                android:layout_marginTop="40dp"
+                android:src="@drawable/login_registed_personal_interes_completed_survey" />
+
+            <TextView
+                android:id="@+id/tv_send_msg_again"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/iv_complete"
+                android:layout_marginTop="25dp"
+                android:textStyle="italic"
+                android:text="@string/login_regsited_sendmail_again"
+                android:textSize="16sp"
+                android:textColor="#1da3e3"
+                />
+        </LinearLayout>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/registied_account_login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+		android:layout_alignParentBottom="true"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="32dp"
+        android:text="@string/registied_account_login"
+        android:textColor="#1da3e3"
+        android:textSize="17sp" />
+
+</RelativeLayout>

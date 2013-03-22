@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="main_bg">#fffcf0</color>
+    <color name="black">#000000</color>
+    <color name="white">#FFFFFF</color>
+    <color name="listitem_transparent">#00000000</color>
+    <color name="listitem_black">#ff000000</color>
+    <color name="listitem_gray">#ff9da19e</color>
+    <!-- loadingpage -->
+    <color name="loadingpage_textColor">#8A8A8A</color>
+    <color name="laodingpage_white">#ffffff</color>
+	<color name="loginmain_black">#333333</color>
+    <color name="loginmain_gray">#666764</color>
+    <color name="login_findpwdtitlegray">#666666</color>
+    <color name="login_findpwdtitleblue">#1da3e3</color>
+    <color name="login_red">#FE0100</color>
+    <color name="light_blue">#4aafec</color>
+    <color name="light_gray">#666666</color>
+    <color name="light_red">#d31513</color>
+    <color name="avater_bg">#999999</color>
+    <color name="content_publish_item_bg">#fffcf0</color>
+    
+    
+    <!-- 设置透明度为56%(9/16)左右 --> 
+    <color name="base_transparent">#50000000</color> 
+    <!-- 主要的文字内容 都是这个颜色 -->
+    <color name="base_content">#444555</color>
+    <!-- 对话框登录窗口 -->
+    <color name="half_transparent">#aa000000</color>
+    
+    <color name = "head_cover">#aa141517</color>
+    
+    <!-- epg -->
+    <color name="program_info">#333333</color>
+    <color name="program_light_info">#666666</color>
+    <color name="channellist_bg">#fffcf0</color>
+    
+    <!-- social friend -->
+    <color name="friend_nickname">#4aafec</color>
+    <color name="friend_trends">#333333</color>
+    <!-- social photo -->
+    <color name="loading_bg">#fffcf0</color>
+    <!-- content 三级页面 -->
+    <color name="time">#666666</color>
+    <color name="headler_bg">#EEE9BF</color>
+    <color name="content_price">#d31513</color>
+    
+    <!-- search item -->
+    <color name="item_color">#1da3e3</color>
+</resources>

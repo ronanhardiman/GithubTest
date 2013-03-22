@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/bg"
+    android:orientation="vertical" 
+    android:id="@+id/base_main" xmlns:app="http://schemas.android.com/apk/res/com.igrs.tivic.phone">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical" >
+
+        <com.igrs.tivic.phone.ViewGroup.BaseTopBar
+            android:id="@+id/base_top_bar"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:focusable="true" />
+
+        <com.igrs.tivic.phone.ViewGroup.SlideMenuViewGroup
+            android:id="@+id/mainGroup"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            >
+             
+			<ImageView
+            	android:id="@+id/base_wave"
+            	android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+            	android:background="@drawable/base_top_wave"
+            	
+			/>
+			 
+            <com.igrs.tivic.phone.ViewGroup.BaseEmpty
+                android:id="@+id/base_empty"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent" />
+
+            <com.igrs.tivic.phone.ViewGroup.UsrMenuBar
+                android:id="@+id/usr_menu_bar"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_gravity="right"
+                android:clickable="true"
+                android:focusable="true"
+                android:gravity="center" />
+        </com.igrs.tivic.phone.ViewGroup.SlideMenuViewGroup>
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="82dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|right"       
+        >
+        <com.igrs.tivic.phone.widget.AsyncImageView
+            android:id="@+id/usr_btn"
+            android:layout_width="65dp"
+            android:layout_height="65dp"
+            android:scaleType="fitXY"
+            android:paddingTop="4dp"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:paddingBottom="6dp"
+            android:layout_margin="8dp"
+            android:background="@drawable/base_usrinfo"
+            />
+
+        <TextView
+            android:id="@+id/usr_remind"
+            style="@style/RemindTextStyle"
+            android:layout_marginLeft="5dp"
+            android:background="@drawable/base_menu_remind"
+            android:text="@string/social_remind_new"
+		/>
+    </FrameLayout>
+    <LinearLayout
+        android:id="@+id/linear_menu_parent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+        </LinearLayout>
+</FrameLayout>

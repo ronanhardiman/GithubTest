@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res/com.igrs.tivic.phone"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:paddingBottom="@dimen/social_friend_margin_tb"
+    android:paddingLeft="@dimen/social_friend_margin_rl"
+    android:paddingRight="@dimen/social_friend_margin_rl"
+    android:paddingTop="@dimen/social_friend_margin_tb" >
+
+    <RelativeLayout
+        android:layout_width="61dp"
+        android:layout_height="61dp"
+        android:layout_marginRight="@dimen/social_friend_margin_tb"
+        android:background="#999999"
+        android:gravity="center" >
+
+        <!-- android:background="@drawable/base_usrinfo" -->
+
+        <com.igrs.tivic.phone.widget.AsyncImageView
+            android:id="@+id/social_friend_icon"
+            android:layout_width="65dp"
+            android:layout_height="65dp"
+            android:background="@color/avater_bg"
+            android:padding="1dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/base_usrinfo" />
+
+        <ImageView
+            android:id="@+id/head_cover"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:background="@color/head_cover"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/social_friend_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:text="用户名"
+            android:textColor="@color/friend_nickname"
+            android:textSize="@dimen/tv_social_nickname" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <ImageView
+                android:id="@+id/social_friend_gender"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/ugc_gender_femaile" />
+
+            <TextView
+                android:id="@+id/social_friend_distance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/social_friend_margin_tb"
+                android:text="@string/loc_unknown"
+                android:textColor="@color/friend_nickname"
+                android:textSize="@dimen/tv_social_ditance"
+                android:textStyle="italic" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/social_friend_program"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/social_programe_title"
+            android:textColor="@color/base_content"
+            android:textSize="14dp" />
+
+        <TextView
+            android:id="@+id/social_friend_trends"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:visibility="gone"
+            android:text="@string/social_trends"
+            android:textColor="@color/base_content"
+            android:textSize="14dp" />
+    </LinearLayout>
+
+</LinearLayout>

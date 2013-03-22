@@ -1,0 +1,104 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:greendroid="http://schemas.android.com/apk/res/com.igrs.tivic.phone"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <TextView
+        android:id="@+id/video_title"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:padding="5dip"
+        android:textSize="@dimen/comment_describe_title"
+        android:textColor="@color/base_content"
+        android:textStyle="bold"
+        />
+    <RelativeLayout
+        android:id="@+id/content_video_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/video_title" >
+		<com.igrs.tivic.phone.widget.AsyncImageView
+        android:id="@+id/video_poster"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:padding="2dip"
+        android:scaleType="fitXY"
+        greendroid:defaultSrc="@drawable/base_queshengtu4_3" />
+        <ImageView
+            android:id="@+id/content_play"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:background="@drawable/pgc_bofang_btn" />
+    </RelativeLayout>
+	<TextView
+        android:id="@+id/video_from"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/content_video_layout"
+        android:paddingLeft="10dip"
+        android:text="@string/video_from" 
+        android:gravity="center_vertical"
+        />
+	<TextView
+        android:id="@+id/video_length"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignBaseline="@id/video_from"
+        android:layout_toRightOf="@id/video_from"
+        android:paddingRight="10dip"
+        android:gravity="center_vertical|right"
+        />
+	<!-- 
+		//for textView  id = video_from
+        android:drawableRight="@drawable/sinaicon"
+        
+    <TextView
+        android:id="@+id/video_from"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/content_video_layout"
+        android:paddingRight="10dip"
+        android:gravity="center_vertical"
+        />
+         -->
+    <View
+        android:id="@+id/divider_view"
+        android:layout_below="@id/video_from"
+        android:layout_width="fill_parent"
+        android:layout_height="1dip"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginTop="5dip"
+        android:layout_marginBottom="5dip"
+        android:background="@drawable/divider" />
+ 
+    <TextView
+        android:id="@+id/member_reviews"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/divider_view"
+        android:layout_marginTop="9dp"
+        android:paddingLeft="10dip"
+        android:textSize="@dimen/comment_describe_title"
+        android:textColor="@color/base_content"
+        android:text="@string/member_reviews" />
+    <LinearLayout 
+            android:layout_below="@id/member_reviews"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="26dp"
+            android:id="@+id/layout_prompt"
+            android:orientation="horizontal"
+            android:gravity="center"
+            >
+        </LinearLayout>
+
+</RelativeLayout>

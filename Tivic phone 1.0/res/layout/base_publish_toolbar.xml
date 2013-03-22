@@ -1,0 +1,38 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+	android:layout_height="wrap_content"
+	android:orientation="horizontal"
+	android:gravity="right"
+	android:background="@color/content_publish_item_bg"
+	xmlns:app="http://schemas.android.com/apk/res/com.igrs.tivic.phone">			
+				<!-- <ImageView 
+				    android:id="@+id/selected_imageview"
+				    android:layout_width="60.0dip"
+					android:layout_height="45.0dip"
+					android:layout_marginLeft="15.0dip"
+				    android:gravity="left"
+				    android:clickable="true"
+				    android:visibility="invisible"
+				    /> -->
+				<com.igrs.tivic.phone.widget.AsyncImageView
+				    android:id="@+id/selected_imageview"
+				    android:layout_marginLeft="15dip"
+				    android:layout_width="60.0dip"
+				    android:layout_height="45.0dip" />
+			
+				<ImageButton 
+				    android:id="@+id/relative_sina_button"
+				    android:layout_width="wrap_content"
+				    android:layout_height="wrap_content"
+				    android:scaleType="fitXY"
+				    android:paddingLeft="25dp"
+				    android:background="@drawable/relative_sina_false"
+				    />
+				<Button android:id="@+id/select_pictures_button" android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:paddingLeft="10dp"
+					android:layout_gravity="center_vertical|right"
+					android:layout_marginRight="23dip"
+					android:background="@drawable/social_page_picture_storage"
+					 />
+</LinearLayout>

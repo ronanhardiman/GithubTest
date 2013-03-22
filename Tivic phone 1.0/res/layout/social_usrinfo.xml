@@ -1,0 +1,54 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:gravity="center"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+      <!--  <fragment
+            android:id="@+id/base_info"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:name="com.igrs.tivic.phone.Fragment.SocialUsrInfoBaseInfoFragment" /> -->
+		<com.igrs.tivic.phone.ViewGroup.SocialUsrInfoBaseFrame
+		    android:id="@+id/base_info"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+		    />
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="6dp"
+            android:src="@drawable/social_base_line" />
+
+        <!-- <fragment
+            android:id="@+id/base_interest"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:name="com.igrs.tivic.phone.Fragment.SocialUsrInfoInterestFragment" />
+ -->
+ 		<com.igrs.tivic.phone.ViewGroup.SocialUsrInfoContainer
+ 		    android:id="@+id/container"
+ 		    android:layout_width="match_parent"
+ 		    android:layout_height="match_parent"
+ 		    >
+ 		    <com.igrs.tivic.phone.ViewGroup.SocialUsrInfoDetail
+ 		        android:id="@+id/info"
+		        android:layout_width="match_parent"
+		        android:layout_height="match_parent"
+ 		        />
+ 		    <!-- android:visibility="gone" -->
+ 		    <com.igrs.tivic.phone.ViewGroup.SocialUsrInfoMyPhoto
+ 		        android:id="@+id/photo"
+ 		        android:layout_width="match_parent"
+ 		        android:layout_height="match_parent"
+ 		        android:visibility="gone"
+ 		        />
+ 		</com.igrs.tivic.phone.ViewGroup.SocialUsrInfoContainer>
+    </LinearLayout>
+
+</FrameLayout>
