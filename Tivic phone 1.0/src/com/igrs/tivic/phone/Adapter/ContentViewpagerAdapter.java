@@ -4,7 +4,6 @@ import java.util.ArrayList;
 import java.util.HashMap;
 
 import com.igrs.tivic.phone.R;
-import com.igrs.tivic.phone.Activity.ContentActivity;
 import com.igrs.tivic.phone.Activity.ContentPublishActivity;
 import com.igrs.tivic.phone.Activity.LoginActivity;
 import com.igrs.tivic.phone.Activity.LoginRegistrationActivity;
@@ -47,7 +46,6 @@ public class ContentViewpagerAdapter extends PagerAdapter {
 	private ArrayList<ContentTypesBean> contentTypeBeanList;
 	private ContentImpl cImpl;
 	private HashMap<String, String> article_id_map;
-	private ContentActivity parentActivity;
 	private ArrayList<String> id_list;
 	
 	public ContentViewpagerAdapter(Context context){
@@ -80,7 +78,7 @@ public class ContentViewpagerAdapter extends PagerAdapter {
 	}
 	private View createItemView(ContentTypesBean contentTypesBean,Boolean isCollection) {
 		ContentsView cView = new ContentsView(context);
-		cView.setContent(contentTypesBean,mIsLogin,parentActivity,isCollection);
+		cView.setContent(contentTypesBean);
 		cView.setOnButtonClickListener(new onButtonClickListener() {
 			@Override
 			public void onClick(int index) {
@@ -132,10 +130,9 @@ public class ContentViewpagerAdapter extends PagerAdapter {
 	public boolean isViewFromObject(View arg0, Object arg1) {
 		return arg0 == arg1;
 	}
-	public void setAdapterData(ArrayList<ContentTypesBean> contentTypeBeanList, boolean mIsLogin,ContentActivity activity,ArrayList<String> id_list,HashMap<String, String> article_id_map) {
+	public void setAdapterData(ArrayList<ContentTypesBean> contentTypeBeanList,ArrayList<String> id_list,HashMap<String, String> article_id_map) {
 		this.contentTypeBeanList = contentTypeBeanList;
 		this.mIsLogin = mIsLogin;
-		this.parentActivity = activity;
 		this.id_list = id_list;
 		this.article_id_map = article_id_map;
 		count = contentTypeBeanList.size();

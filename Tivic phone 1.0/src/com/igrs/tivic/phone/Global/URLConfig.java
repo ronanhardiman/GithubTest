@@ -15,10 +15,13 @@ public class URLConfig {
 	
 	
 	
-	public static final String port="8080";	
+//	public final static String CMSIP = "http://static.tivic.com";
+//	public static final String SNSIP = "http://apiv2.tivic.com";  
+//	public final static String avarter_path = "http://image.tivic.com";	//用户头像
+	
+	
 	public static final String passport ="passport";	
 	public static final String header = SNSIP + "/index.php";
-	
 	//register
 
 	
@@ -47,7 +50,7 @@ public class URLConfig {
 	
 	public static final String login_login = SNSIP + "/index.php/api/user/login";
 	public static final String login_getUID = SNSIP + "/sns/api/v1/login.php?";
-	public static final String login_logout = SNSIP + port + "/api/v1/logout.json";
+//	public static final String login_logout = SNSIP + port + "/api/v1/logout.json";
 	public static final String login_sns = SNSIP + "/sns/api/v1/login.php";
 	public static final String login_weibo = "";
 	

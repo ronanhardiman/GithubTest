@@ -561,7 +561,7 @@ public class BaseActivity extends Activity implements RefreshDataListener {
 		case FuncID.ID_CONTENT:
 			try {
 				intent.setClassName("com.igrs.tivic.phone",
-						"com.igrs.tivic.phone.Activity.ContentActivity");
+						"com.igrs.tivic.phone.Activity.ContentsActivity");
 				startActivity(intent);
 				UIUtils.setCurrentFuncID(FuncID.ID_CONTENT);
 				// Log.i(TAG, "kevin add: jiump to ContentActivity");

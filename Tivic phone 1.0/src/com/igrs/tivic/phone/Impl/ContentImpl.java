@@ -221,7 +221,7 @@ public class ContentImpl implements IContent{
 						cBean.setType("video");
 					}
 				}
-				handler.obtainMessage(1, MSG_COLLECTON, position, cBean).sendToTarget();
+				handler.obtainMessage(1, MSG_CONTENTS, position, cBean).sendToTarget();
 			}
 		}).start();
 	}
@@ -694,7 +694,7 @@ user/visit
 	}
 	
 	/**
-	 * 
+	 * 获取收藏列表
 	 * @param handler
 	 */
 	public void getCollectionList(final Handler handler){

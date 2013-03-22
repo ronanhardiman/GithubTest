@@ -150,8 +150,8 @@ public class LoginImpl implements ILogin {
 	 * 注销
 	 */
 	public void logout() {
-		String url = URLConfig.login_logout;
-		httpClientUtils.requestGet(url, charset);
+//		String url = URLConfig.login_logout;
+//		httpClientUtils.requestGet(url, charset);
 	}
 
 	/*

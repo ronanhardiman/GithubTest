@@ -34,7 +34,7 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.igrs.tivic.phone.R;
-import com.igrs.tivic.phone.Activity.ContentActivity;
+import com.igrs.tivic.phone.Activity.ContentsActivity;
 import com.igrs.tivic.phone.Activity.VideoPlayActivity;
 import com.igrs.tivic.phone.Adapter.ContentPublishListViewAdapter2;
 import com.igrs.tivic.phone.AsyncTask.ContentPublishAsyncTask;
@@ -75,13 +75,10 @@ public class ContentsView extends FrameLayout implements OnClickListener,Content
 	private ArrayList<TVFindParagraphBean> tvFindBeanList;
 	private ImageView pay_image;
 	private onButtonClickListener buttonClickListener;
-	private HashMap<String, String> a_id_map;
-	private Activity activity;
 	private String pay_url = "";
 	private int offset = 0;
 	private int gallery_item_width;
 	float density = getResources().getDisplayMetrics().density;	//密度
-	private String nbsp = "&nbsp";
 	
 	//zhanglr add
 	ArrayList<ContentPublishBean> replyList = new ArrayList<ContentPublishBean>();
@@ -118,17 +115,17 @@ public class ContentsView extends FrameLayout implements OnClickListener,Content
 //			int len = TivicGlobal.getInstance().displayWidth;
 //			UIUtils.Logd("liq", "len : tvfind imagewidth === "+ContentActivity.device_width);
 //			gallery_item_width = (int) (330 + 50*density);	//设置tvfind 商品图片的宽度
-			gallery_item_width = ContentActivity.device_width*5/6;
+			gallery_item_width = ContentsActivity.device_width*5/6;
 			
 			TextView right_mark_layout = (TextView) content_item.findViewById(R.id.right_mark_layout);
 //			right_mark_layout.setLayoutParams(new RelativeLayout.LayoutParams(40, 100));
 			right_mark_layout.getLayoutParams().height = gallery_item_width*3/4;
-			right_mark_layout.getLayoutParams().width = ContentActivity.device_width/12;
+			right_mark_layout.getLayoutParams().width = ContentsActivity.device_width/12;
 			
 			TextView left_mark_layout = (TextView) content_item.findViewById(R.id.left_mark_layout);
 //			right_mark_layout.setLayoutParams(new RelativeLayout.LayoutParams(40, 100));
 			left_mark_layout.getLayoutParams().height = gallery_item_width*3/4;
-			left_mark_layout.getLayoutParams().width = ContentActivity.device_width/12;
+			left_mark_layout.getLayoutParams().width = ContentsActivity.device_width/12;
 			
 			if(contentTypesBean.getObject() != null)
 			tPBeanList = ((TVFindBean) contentTypesBean.getObject()).getParagraphList();
@@ -192,10 +189,7 @@ public class ContentsView extends FrameLayout implements OnClickListener,Content
 					tView.setTextColor(getResources().getColor(R.color.base_content));
 					tView.setTypeface(Typeface.DEFAULT,Typeface.NORMAL);
 					tView.setLineSpacing(10, 1.1f);
-//					tView.setPadding(left, top, right, bottom);
-//					tView.setGravity(Gravity.LEFT);
 					LinearLayout.LayoutParams lp = new LinearLayout.LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.WRAP_CONTENT);
-//					lp.gravity = Gravity.RIGHT;
 					news_items_layout.addView(tView, lp);
 				}else if("img".equals(pBean.getType())){//图片内容
 					AsyncImageView imageView = new AsyncImageView(mContext);
@@ -243,7 +237,7 @@ public class ContentsView extends FrameLayout implements OnClickListener,Content
 			TextView video_title = (TextView) content_item.findViewById(R.id.video_title);
 			video_title.setText(vBean.getTitle());
 			AsyncImageView video_poster = (AsyncImageView) content_item.findViewById(R.id.video_poster);
-			RelativeLayout.LayoutParams rLp = new RelativeLayout.LayoutParams(RelativeLayout.LayoutParams.MATCH_PARENT, activity.getWindowManager().getDefaultDisplay().getWidth() * 3/4);
+			RelativeLayout.LayoutParams rLp = new RelativeLayout.LayoutParams(RelativeLayout.LayoutParams.MATCH_PARENT, ContentsActivity.device_width * 3/4);
 			video_poster.setLayoutParams(rLp);
 			video_poster.setUrl(vBean.getPosterUrl()+"!w512");
 			ImageView content_play = (ImageView) content_item.findViewById(R.id.content_play);
@@ -344,15 +338,9 @@ public class ContentsView extends FrameLayout implements OnClickListener,Content
 		}
 		buttonClickListener.onClick(id);
 	}
-	public void setContent(ContentTypesBean contentTypesBean, Boolean mIsLogin,Activity activity,Boolean isCollection) {
-		this.contentTypesBean = contentTypesBean;
-		this.activity = activity;
-		init();
-	}
 	
-	public void setContent(ContentTypesBean contentTypesBean, Activity activity) {
+	public void setContent(ContentTypesBean contentTypesBean) {
 		this.contentTypesBean = contentTypesBean;
-		this.activity = activity;
 		init();
 	}
 	
