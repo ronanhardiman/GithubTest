@@ -8,16 +8,16 @@ public class URLConfig {
 //	public final static String CMSIP = "http://devstatic.b0.upaiyun.com";
 //	public final static String snapshot_path = "http://snapshot.tivic.com";
 //测试环境
-	public static final String SNSIP = "http://10.1.33.34";
-	public final static String avarter_path = "http://unstableimagev2.b0.upaiyun.com";
-	public final static String CMSIP = "http://unstablestatic.b0.upaiyun.com";
-	public final static String snapshot_path = "http://snapshot.tivic.com";	
+//	public static final String SNSIP = "http://10.1.33.34";
+//	public final static String avarter_path = "http://unstableimagev2.b0.upaiyun.com";
+//	public final static String CMSIP = "http://unstablestatic.b0.upaiyun.com";
+//	public final static String snapshot_path = "http://snapshot.tivic.com";	
 	
 	
 	
-//	public final static String CMSIP = "http://static.tivic.com";
-//	public static final String SNSIP = "http://apiv2.tivic.com";  
-//	public final static String avarter_path = "http://image.tivic.com";	//用户头像
+	public final static String CMSIP = "http://static.tivic.com";
+	public static final String SNSIP = "http://apiv2.tivic.com";  
+	public final static String avarter_path = "http://image.tivic.com";	//用户头像
 	
 	
 	public static final String passport ="passport";	

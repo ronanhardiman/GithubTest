@@ -164,7 +164,29 @@ public  class ContentsActivity extends BaseActivity implements OnClickListener{
 				contentTypeBeanList.set(msg.arg2, (ContentTypesBean) msg.obj);
 				if(mAdapter == null){
 					mAdapter = new MyViewPagerAdapter();
+					viewpager_content.setAdapter(mAdapter);
+					viewpager_content.setCurrentItem(selectIndex);
+					tivicGlobal.currentCid = Integer.parseInt(id_list.get(selectIndex));
+					
+					viewpager_content.setOnPageChangeListener(new OnPageChangeListener() {
+						
+						@Override
+						public void onPageSelected(int position) {
+							cImpl.getContent(sendDataList.get(position), position, loadingHandler);
+							tivicGlobal.currentCid = Integer.parseInt(id_list.get(position));
+							isCollection(article_id_map.containsKey(String.valueOf(id_list.get(position))));
+						}
+						
+						@Override
+						public void onPageScrolled(int position, float arg1, int arg2) {
+						}
+						@Override
+						public void onPageScrollStateChanged(int position) {
+						}
+					});
 				}
+				
+				
 				mAdapter.notifyDataSetChanged();
 				break;
 			default:
@@ -172,7 +194,7 @@ public  class ContentsActivity extends BaseActivity implements OnClickListener{
 			}
 		};
 	};
-	private ContentsView cView2;
+//	private ContentsView cView2;
 	private void isCollection(Boolean isCollection) {
 		if(isCollection){
 			button_collect.setBackgroundResource(R.drawable.content_collected_button);
@@ -190,27 +212,27 @@ public  class ContentsActivity extends BaseActivity implements OnClickListener{
 		cImpl.getContent(sendDataList.get(selectIndex), selectIndex, loadingHandler);
 		cImpl.getCollectionList(collection_list_handler);
 		
-		mAdapter = new MyViewPagerAdapter();
-		viewpager_content.setAdapter(mAdapter);
-		viewpager_content.setCurrentItem(selectIndex);
-		tivicGlobal.currentCid = Integer.parseInt(id_list.get(selectIndex));
-		
-		viewpager_content.setOnPageChangeListener(new OnPageChangeListener() {
-			
-			@Override
-			public void onPageSelected(int position) {
-				cImpl.getContent(sendDataList.get(position), position, loadingHandler);
-				tivicGlobal.currentCid = Integer.parseInt(id_list.get(position));
-				isCollection(article_id_map.containsKey(String.valueOf(id_list.get(position))));
-			}
-			
-			@Override
-			public void onPageScrolled(int position, float arg1, int arg2) {
-			}
-			@Override
-			public void onPageScrollStateChanged(int position) {
-			}
-		});
+//		mAdapter = new MyViewPagerAdapter();
+//		viewpager_content.setAdapter(mAdapter);
+//		viewpager_content.setCurrentItem(selectIndex);
+//		tivicGlobal.currentCid = Integer.parseInt(id_list.get(selectIndex));
+//		
+//		viewpager_content.setOnPageChangeListener(new OnPageChangeListener() {
+//			
+//			@Override
+//			public void onPageSelected(int position) {
+//				cImpl.getContent(sendDataList.get(position), position, loadingHandler);
+//				tivicGlobal.currentCid = Integer.parseInt(id_list.get(position));
+//				isCollection(article_id_map.containsKey(String.valueOf(id_list.get(position))));
+//			}
+//			
+//			@Override
+//			public void onPageScrolled(int position, float arg1, int arg2) {
+//			}
+//			@Override
+//			public void onPageScrollStateChanged(int position) {
+//			}
+//		});
 	}
 	public class MyViewPagerAdapter extends PagerAdapter{
 		
@@ -260,7 +282,7 @@ public  class ContentsActivity extends BaseActivity implements OnClickListener{
 	}
 
 	public View createItemView(int position) {
-		cView2 = new ContentsView(this);
+		ContentsView cView2 = new ContentsView(this);
 		cView2.setContent(contentTypeBeanList.get(position));
 		cView2.setOnButtonClickListener(new onButtonClickListener() {
 			

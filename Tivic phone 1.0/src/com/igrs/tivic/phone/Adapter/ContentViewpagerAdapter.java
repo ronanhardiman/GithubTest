@@ -132,7 +132,6 @@ public class ContentViewpagerAdapter extends PagerAdapter {
 	}
 	public void setAdapterData(ArrayList<ContentTypesBean> contentTypeBeanList,ArrayList<String> id_list,HashMap<String, String> article_id_map) {
 		this.contentTypeBeanList = contentTypeBeanList;
-		this.mIsLogin = mIsLogin;
 		this.id_list = id_list;
 		this.article_id_map = article_id_map;
 		count = contentTypeBeanList.size();

@@ -203,20 +203,20 @@ public class ContentImpl implements IContent{
 		new Thread(new Runnable() {
 			@Override
 			public void run() {
-				ContentTypesBean cBean = new ContentTypesBean();
+				ContentTypesBean cBean = null;
 				for (int j = 0; j < sBean.articleUrlList.size(); j++) {
 					String url = sBean.articleUrlList.get(j);
 					String json = httpClientUtils.requestGet(url, charset);
 					if("tvfind".equals(sBean.type)){
-//						ContentTypesBean cBean = new ContentTypesBean();
+						cBean = new ContentTypesBean();
 						cBean.setObject(ContentDetailParser.getContentTVfind(json));
 						cBean.setType("tvfind");
 					}else if("news".equals(sBean.type)){
-//						ContentTypesBean cBean = new ContentTypesBean();
+						cBean = new ContentTypesBean();
 						cBean.setObject(ContentDetailParser.getContentNews(json));
 						cBean.setType("news");
 					}else if("video".equals(sBean.type)){
-//						ContentTypesBean cBean = new ContentTypesBean();
+						cBean = new ContentTypesBean();
 						cBean.setObject(ContentDetailParser.getContentVide(json));
 						cBean.setType("video");
 					}
