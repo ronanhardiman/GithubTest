@@ -11,6 +11,11 @@ import android.content.Intent;
 import android.support.v4.view.ViewPager;
 import android.view.Menu;
 import android.view.View;
+/**
+ * this is the mistake
+ * @author liq
+ *
+ */
 public class MainActivity extends Activity implements DataLoadingListener{
 
 	private ViewPager viewpager;
