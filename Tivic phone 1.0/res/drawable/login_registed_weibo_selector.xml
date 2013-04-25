@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<selector xmlns:android="http://schemas.android.com/apk/res/android"  >
-<item android:state_checked="false" android:drawable="@drawable/login_registed_weibo_normal"/>
-<item android:state_checked="true" android:drawable="@drawable/login_register_personal_interest_survey_micro_blog_binding"/>
-    
-
-</selector>
